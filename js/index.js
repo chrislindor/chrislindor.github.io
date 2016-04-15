@@ -8,15 +8,22 @@ var $userInput = $('.dataSubmission input[type="text"]'),
 $('.dataSubmission').submit(function(event){
   event.preventDefault();
 
-  // fetch search term from the text field
   userRawSearch = $userInput.val();
 
-  // call search function and pass the search term as a parameter
-  hashtagSearch(userRawSearch);
-  $('#searchDisplay').text(userRawSearch);
-  $(".pictureRender").html("");
-  $("#search-term").val("");
+  if (userRawSearch[0] === "#") {
+    hashtagSearch(userRawSearch.substr(1));
+    updateName();
+    $(".pictureRender").html("");
+    $($userInput).val("");
+  } else if (userRawSearch[0] === "@") {
+
+  }
+
 });
+
+function updateName() {
+  $('#searchDisplay').text(userRawSearch);
+}
 
 function displayResults(results){
   var photos = results.data;
