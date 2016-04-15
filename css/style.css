@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #FCFAF7;
+  font-size: 16px;
+  color: #545351;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+header .mainLogo {
+  width: 45%;
+  cursor: pointer;
+}
+
+#searchDisplay {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+#searchInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.dataSubmission {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#searchInput p {
+  width: 70%;
+  text-align: center;
+  margin: 10px auto;
+}
+#searchInput button {
+  width: 40%;
+  margin: 10px 30px;
+  border-style: none;
+  background-color: #FBEFDC;
+  padding: 10px 30px;
+}
+
+#searchInput input[type='text'] {
+  background-color: #FCFAF7;
+  border-style: none;
+  border-bottom: 4px solid #545351;
+  width: 70%;
+  outline: none;
+  text-align: center;
+  border-radius: 0;
+}
+.pictureRender {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pictureRender figure{
+  width: 100%;
+  margin: 0;
+}
+
+.pictureRender figure img {
+  max-width: 640px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+  }
+  header .mainLogo {
+    width: 200px;
+  }
+  header, #searchInput {
+    max-width: 1200px;
+  }
+  main {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #searchDisplay {
+    font-size: 2.4em;
+    text-align: right;
+  }
+  #searchInput {
+    align-self: center;
+  }
+  .pictureRender figure {
+    width: 50%;
+  }
+  .pictureRender figure img {
+    max-width: 640px;
+  }
+}
