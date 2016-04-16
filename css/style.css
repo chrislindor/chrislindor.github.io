@@ -84,9 +84,11 @@ header .mainLogo {
   width: 100%;
 }
 
+
 @media only screen and (min-width: 768px) {
   header {
     flex-wrap: nowrap;
+    align-items: center;
   }
   header .mainLogo {
     width: 200px;
