@@ -5,25 +5,37 @@ var $userInput = $('.dataSubmission input[type="text"]'),
     searchId;
 
 
-
+$('body').on('click', '.mainLogo', function() {
+  showElement('.searchInput');
+  $(".pictureRender").html("");
+});
 $('.dataSubmission').submit(function(event){
   event.preventDefault();
 
   userSearch = $userInput.val();
-
   if (userSearch[0] === "#") {
     hashtagSearch(userSearch.substr(1));
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
+    hideElement('.searchInput');
   } else if (userSearch[0] === "@") {
     userIdLookUp(userSearch.substr(1));
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
+    hideElement('.searchInput');
   }
 
 });
+
+function hideElement(element) {
+  $(element).addClass('hideElement');
+}
+
+function showElement(element) {
+  $(element).removeClass('hideElement');
+}
 
 function updateName() {
   $('#searchDisplay').text(userSearch);

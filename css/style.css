@@ -31,7 +31,7 @@ header .mainLogo {
   width: 100%;
 }
 
-#searchInput {
+.searchInput {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -45,12 +45,12 @@ header .mainLogo {
   flex-wrap: wrap;
 }
 
-#searchInput p {
+.searchInput p {
   width: 70%;
   text-align: center;
   margin: 10px auto;
 }
-#searchInput button {
+.searchInput button {
   width: 40%;
   margin: 10px 30px;
   border-style: none;
@@ -58,7 +58,7 @@ header .mainLogo {
   padding: 10px 30px;
 }
 
-#searchInput input[type='text'] {
+.searchInput input[type='text'] {
   background-color: #FCFAF7;
   border-style: none;
   border-bottom: 4px solid #545351;
@@ -73,6 +73,7 @@ header .mainLogo {
   max-width: 1200px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 100px;
 }
 .pictureRender figure{
   width: 100%;
@@ -84,7 +85,6 @@ header .mainLogo {
   width: 100%;
 }
 
-
 @media only screen and (min-width: 768px) {
   header {
     flex-wrap: nowrap;
@@ -93,7 +93,7 @@ header .mainLogo {
   header .mainLogo {
     width: 200px;
   }
-  header, #searchInput {
+  header, .searchInput {
     max-width: 1200px;
   }
   main {
@@ -106,7 +106,7 @@ header .mainLogo {
     font-size: 2.4em;
     text-align: right;
   }
-  #searchInput {
+  .searchInput {
     align-self: center;
   }
   .pictureRender figure {
@@ -115,4 +115,7 @@ header .mainLogo {
   .pictureRender figure img {
     max-width: 640px;
   }
+}
+.hideElement {
+  display: none;
 }
