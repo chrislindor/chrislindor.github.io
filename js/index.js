@@ -27,11 +27,15 @@ $('.dataSubmission').submit(function(event){
     $($userInput).val("");
     hideElement('.searchInput');
   } else if (userSearch[0] !== '#' || userSearch[0] !== '@') {
-    $userInput.effect( "shake" );
+    inputError();
   }
 
 
 });
+
+function inputError() {
+  $userInput.effect('shake');
+}
 
 function hideElement(element) {
   $(element).addClass('hideElement');
@@ -51,8 +55,7 @@ function userIdMatch(results) {
   for (var i = 0; i < userData.length; i++) {
     if (userData[i].username === userSearch.substr(1)) {
       searchId = userData[i].id;
-      $('footer').text(searchId);
-      // console.log(searchId);
+      console.log(searchId);
       console.log(userData[i].username);
     }
   }
@@ -60,11 +63,9 @@ function userIdMatch(results) {
 
 function displayResults(results){
   var photos = results.data;
-
-  // use jquery to create a new table row containing data received from the API
+  // use jquery to create a new figure and image element containing data received from the API
   $.each(photos, function(index, photo){
-    $(".pictureRender").append("<figure><img src='" + photo.images.standard_resolution.url +"'/>");
-
+    $(".pictureRender").append("<figure><img src='" + photo.images.standard_resolution.url +"'/></figure>");
   });
 }
 
@@ -80,7 +81,6 @@ function hashtagSearch(tag){
   $.ajax({
     url: url,
     type: "GET",
-    // async: false,
     dataType: 'jsonp',
     data: {access_token: anotherAccessToken},
     success: function(data){
@@ -130,5 +130,5 @@ function userIdLookUp(username){
     },
 
   });
-  console.log(searchId);
+
 }
