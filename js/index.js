@@ -19,13 +19,11 @@ $('.dataSubmission').submit(function(event){
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
-    hideElement('.searchInput');
   } else if (userSearch[0] === "@" && userSearch.length > 2) {
     userIdLookUp(userSearch.substr(1));
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
-    hideElement('.searchInput');
   } else if (userSearch[0] !== '#' || userSearch[0] !== '@') {
     inputError();
   }
@@ -47,6 +45,17 @@ function showElement(element) {
 
 function updateName() {
   $('#searchDisplay').text(userSearch);
+}
+
+function userCheck(results) {
+  var userMeta = results.meta;
+  console.log(userMeta.code);
+  if (userMeta.code !== 200) {
+    return false;
+  } else {
+    return true;
+  }
+
 }
 
 function userIdMatch(results) {
@@ -86,6 +95,7 @@ function hashtagSearch(tag){
     success: function(data){
       console.log(data);
       displayResults(data);
+      hideElement('.searchInput');
     }
   });
 }
@@ -104,7 +114,12 @@ function userLookUp(userid){
     data: {access_token: anotherAccessToken},
     success: function(data){
       console.log(data);
-      displayResults(data);
+      if (userCheck(data)) {
+        displayResults(data);
+        hideElement('.searchInput');
+      } else {
+        inputError();
+      }
     }
   });
 }

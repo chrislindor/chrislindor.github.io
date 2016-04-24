@@ -118,6 +118,8 @@ header .mainLogo {
     max-width: 640px;
   }
 }
-
+.hideElement {
+  display: none;
+}
 
 /* Media Query End */
