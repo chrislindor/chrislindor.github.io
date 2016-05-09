@@ -8,22 +8,25 @@ var $userInput = $('.dataSubmission input[type="text"]'),
 $('body').on('click', '.mainLogo', function() {
   showElement('.searchInput');
   $(".pictureRender").html("");
-    $('#searchDisplay').text('');
+  $('#searchDisplay').text('');
+  $('footer').addClass('footer-bottom');
 });
+
 $('.dataSubmission').submit(function(event){
   event.preventDefault();
-
   userSearch = $userInput.val().toLowerCase();
   if (userSearch[0] === "#" && userSearch.length > 2) {
     hashtagSearch(userSearch.substr(1));
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
+    $('footer').removeClass('footer-bottom');
   } else if (userSearch[0] === "@" && userSearch.length > 2) {
     userIdLookUp(userSearch.substr(1));
     updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
+    $('footer').removeClass('footer-bottom');
   } else if (userSearch[0] !== '#' || userSearch[0] !== '@') {
     inputError();
   }
