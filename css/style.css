@@ -25,7 +25,7 @@ header a {
 }
 
 .bold-text {
-
+  font-weight: 700;
 }
 
 .project-section {
@@ -101,7 +101,7 @@ header a {
     justify-content: flex-start;
   }
   .project-section {
-    max-width: 260px;
+    max-width: 240px;
     margin: 0 30px 30px 0;
   }
 
