@@ -1,142 +1,91 @@
-* {
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #545351;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Fira Sans', sans-serif;
-  background-color: #FCFAF7;
-  font-size: 16px;
-  color: #545351;
+#frame {
+  width: 85%;
+  max-width: 1280px;
 }
-
 header {
+  margin: 50px 0 20px 0;
+}
+
+header, main {
   width: 100%;
+}
+
+.project-section {
+  border: 5px solid #545351;
+  margin: 0 0 20px 0;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-
-header .mainLogo {
-  width: 45%;
-  cursor: pointer;
-}
-
-#searchDisplay {
+.project-header {
   font-size: 2em;
-  text-align: center;
-  width: 100%;
-  margin: 100px 0 0 0;
-}
-
-.searchInput {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.dataSubmission {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.searchInput p {
-  width: 70%;
-  text-align: center;
-  margin: 10px auto;
-}
-.searchInput button {
-  width: 40%;
-  margin: 10px 30px;
-  border-style: none;
-  background-color: #FBEFDC;
-  padding: 10px 30px;
-}
-
-.searchInput input[type='text'] {
-  background-color: #FCFAF7;
-  border-style: none;
-  border-bottom: 4px solid #545351;
-  width: 70%;
-  outline: none;
-  text-align: center;
-  border-radius: 0;
-}
-.pictureRender {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 100px;
-}
-.pictureRender figure{
-  width: 100%;
+  font-weight: 900;
   margin: 0;
 }
 
-.pictureRender figure img {
-  max-width: 640px;
+.project-section a {
   width: 100%;
-}
-footer {
-  width: 100%;
+  display: block;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  height: 35px;
+  font-size: 1.3em;
   text-align: center;
   padding: 10px 0;
-  font-size: .8em;
+  font-weight: 700;
 }
 
-.footer-link {
-  color: #545351;
-  font-weight: 800;
-  text-decoration: none;
+.demo-link {
+  background-color: #545351;
 }
 
-.footer-bottom {
-  position: fixed;
-  bottom: 0;
+.repo-link {
+  background-color: #AAAAAA;
+  margin: 7px 0 0 0;
 }
-
-/*Media Query's Begin*/
-@media only screen and (min-width: 768px) {
-  header {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  header .mainLogo {
-    width: 200px;
-  }
-  header, .searchInput {
-    max-width: 1200px;
-  }
+@media only screen and (min-width: 450px) {
   main {
-    min-height: 500px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
   }
-  #searchDisplay {
-    font-size: 2.4em;
-    text-align: right;
-    margin: 0;
+  .project-section {
+    /*width: 45%;*/
   }
-  .searchInput {
-    align-self: center;
+  header p, .header-logo img {
+    width: 400px;
   }
-  .pictureRender figure {
-    width: 50%;
-  }
-  .pictureRender figure img {
-    max-width: 640px;
-  }
-}
-.hideElement {
-  display: none;
+
 }
 
-/* Media Query End */
+@media only screen and (min-width: 769px ) {
+
+  body {
+    justify-content: center;
+  }
+  #frame {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header p, .header-logo img {
+    width: 400px;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .project-section {
+    max-width: 260px;
+    margin: 0 30px 30px 0;
+  }
+
+}
