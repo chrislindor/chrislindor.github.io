@@ -64,7 +64,7 @@ header a {
   background-color: #AAAAAA;
   margin: 7px 0 0 0;
 }
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 450px) and (max-width: 799px) {
   main {
     display: flex;
     flex-wrap: wrap;
