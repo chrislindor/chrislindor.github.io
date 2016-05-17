@@ -19,6 +19,15 @@ header, main {
   width: 100%;
 }
 
+header a {
+  color: #545351;
+  font-weight: 900;
+}
+
+.bold-text {
+
+}
+
 .project-section {
   border: 5px solid #545351;
   margin: 0 0 20px 0;
@@ -56,8 +65,16 @@ header, main {
     display: flex;
     flex-wrap: wrap;
   }
+  #frame {
+    width: 95%;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .project-section {
-    /*width: 45%;*/
+    width: 42%;
   }
   header p, .header-logo img {
     width: 400px;
@@ -65,7 +82,7 @@ header, main {
 
 }
 
-@media only screen and (min-width: 769px ) {
+@media only screen and (min-width: 800px ) {
 
   body {
     justify-content: center;
