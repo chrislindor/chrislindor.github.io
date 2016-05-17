@@ -1,0 +1,18 @@
+<svg id="group-15" xmlns="http://www.w3.org/2000/svg" viewBox="371 -803 271 191">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #020306;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 49px;
+        font-family: OpenSans-Extrabold, Open Sans;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <rect id="rectangle-5" class="cls-1" width="271" height="191" transform="translate(371 -803)"/>
+  <text id="Cash_Register" data-name="Cash Register" class="cls-2" transform="translate(507 -688)"><tspan x="-62.973" y="0">Hi Lo</tspan></text>
+</svg>
