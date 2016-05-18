@@ -1,6 +1,5 @@
 /******** Global Varibles *******/
 var generatedNumber,
-    playerNumb,
     playerChoice,
     choicesLeft = 5,
     gameOver = false,
@@ -12,7 +11,8 @@ var generatedNumber,
     gameOverMessage = 'Game over press reset to play again',
     guessToHi = 'Your guess was to high',
     guessToLow = 'Your guess was to low',
-    correctGuessMessage = 'You win the number was ';
+    correctGuessMessage = 'You win the number was ',
+    playerNumb;
 
 /******** Functions Begin *******/
 
