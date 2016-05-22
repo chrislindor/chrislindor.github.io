@@ -8,7 +8,7 @@ var $userInput = $('.dataSubmission input[type="text"]'),
 $('body').on('click', '.mainLogo', function() {
   showElement('.searchInput');
   $(".pictureRender").html("");
-  $('#searchDisplay').text('');
+  $('.searchDisplay').text('');
   $('footer').addClass('footer-bottom');
 });
 
@@ -17,21 +17,36 @@ $('.dataSubmission').submit(function(event){
   userSearch = $userInput.val().toLowerCase();
   if (userSearch[0] === "#" && userSearch.length > 2) {
     hashtagSearch(userSearch.substr(1));
-    updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
     $('footer').removeClass('footer-bottom');
   } else if (userSearch[0] === "@" && userSearch.length > 2) {
     userIdLookUp(userSearch.substr(1));
-    updateName();
     $(".pictureRender").html("");
     $($userInput).val("");
     $('footer').removeClass('footer-bottom');
   } else if (userSearch[0] !== '#' || userSearch[0] !== '@') {
     inputError();
   }
+});
 
+function getCurrentScroll() {
+  return window.scrollY;
+}
 
+$(window).scroll(function(event) {
+  var shrinkTop = 400,
+  scrollNumb = getCurrentScroll();
+  if (scrollNumb >= shrinkTop) {
+    $('header').addClass('shrink');
+    $('.mainLogo').addClass('img-shrink');
+    $('.searchDisplay').addClass('text-shrink');
+    console.log(scrollNumb);
+  } else {
+    $('header').removeClass('shrink');
+    $('.mainLogo').removeClass('img-shrink');
+    $('.searchDisplay').removeClass('text-shrink');
+  }
 });
 
 function inputError() {
@@ -47,7 +62,7 @@ function showElement(element) {
 }
 
 function updateName() {
-  $('#searchDisplay').text(userSearch);
+  $('.searchDisplay').text(userSearch);
 }
 
 function userCheck(results) {
@@ -79,6 +94,7 @@ function displayResults(results){
   $.each(photos, function(index, photo){
     $(".pictureRender").append("<figure><img src='" + photo.images.standard_resolution.url +"'/></figure>");
   });
+  updateName();
 }
 
 function hashtagSearch(tag){
