@@ -19,8 +19,6 @@ header {
   background-color: #FCFAF7;
 }
 
-
-
 header .mainLogo {
   width: 45%;
   cursor: pointer;
@@ -46,6 +44,7 @@ img.img-shrink {
   width: 100%;
   margin: 100px 0 0 0;
 }
+
 
 .text-shrink {
   font-size: 1.5em;
@@ -89,6 +88,28 @@ img.img-shrink {
   text-align: center;
   border-radius: 0;
 }
+
+.api-error {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /*background-color: #545351;*/
+  /*color: #FCFAF7;*/
+}
+
+.api-error .body-link {
+  color: #545351;
+}
+
+.api-error p {
+  margin: 0;
+  padding: 20px;
+}
+
+.api-error h1 {
+  margin: 20px 0 0 0;
+}
+
 .pictureRender {
   display: flex;
   width: 100%;
@@ -113,10 +134,12 @@ footer {
   font-size: .8em;
 }
 
-.footer-link {
-  color: #545351;
+.body-link  {
   font-weight: 800;
   text-decoration: none;
+}
+footer .body-link {
+  color: #545351;
 }
 
 .footer-bottom {
@@ -137,10 +160,11 @@ footer {
     max-width: 1200px;
   }
   main {
-    min-height: 500px;
+    min-height: 800px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: space-between;
   }
   .searchDisplay {
     font-size: 2.4em;
@@ -148,6 +172,14 @@ footer {
     margin: 0;
   }
 
+  .api-error {
+    margin: 0;
+    /*width: 50%;*/
+  }
+
+  .api-error p {
+    margin: 0 auto;
+  }
   header.shrink {
     top: 0;
     height: 75px;
@@ -172,9 +204,11 @@ footer {
   .pictureRender figure img {
     max-width: 640px;
   }
+
 }
+/* Media Query End */
+
+
 .hideElement {
   display: none;
 }
-
-/* Media Query End */

@@ -147,9 +147,9 @@ function userIdLookUp(username){
   var url = 'https://api.instagram.com/v1/users/search?q=' + username;
   // this is the public beta key, sign up for production if you want this to be live on the web
   // var accessToken = "371341073.b3244b0.cacfc856971e48239838a32de63f2226";
-
+  // var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
   // uses someone else's access token since instagram requires app approve to access public photos
-  var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
+  var anotherAccessToken = "30809397.e3f6f42.eb2a35cacea54357bec78bc2b93ea7ed";
 
   console.log('url', url);
   $.ajax({
