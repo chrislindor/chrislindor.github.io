@@ -1,0 +1,34 @@
+
+
+.reveal section .intro-logo {
+  border: 0px;
+  box-shadow: 0 0;
+  width: 300px;
+}
+
+.reveal section .gw-blue {
+  color: #0056A5;
+}
+
+.reveal section .gw-gray {
+  color: #939598;
+}
+
+.reveal section h2 {
+  color: #939598;
+}
+
+.reveal section .small-body-copy {
+  font-size: .8em;
+}
+
+.reveal section .flex-img-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.reveal section .flex-img-row img {
+  border: 0;
+  box-shadow: 0 0;
+}
