@@ -6,6 +6,11 @@
   width: 300px;
 }
 
+.reveal section .intro-svg {
+  border: 0px;
+  box-shadow: 0 0;
+}
+
 .reveal section .gw-blue {
   color: #0056A5;
 }
