@@ -36,4 +36,19 @@
 .reveal section .flex-img-row img {
   border: 0;
   box-shadow: 0 0;
+  height: 175px;
+  /*flex-basis: 50%;*/
+}
+
+.reveal section .app-img {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.reveal section .app-img img {
+  border: 0;
+  box-shadow: 0 0;
+  /*flex-basis: 50%;*/
+  height: 600px;
 }
