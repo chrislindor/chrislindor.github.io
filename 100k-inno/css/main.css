@@ -57,6 +57,10 @@
   width: 500px;
 }
 
+.reveal section .ex-img {
+  height: 350px;
+}
+
 /*.reveal section .timeline-img {
   width: 100%;
 }*/
