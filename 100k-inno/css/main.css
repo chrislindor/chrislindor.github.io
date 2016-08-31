@@ -50,5 +50,13 @@
   border: 0;
   box-shadow: 0 0;
   /*flex-basis: 50%;*/
-  height: 600px;
+  height: 450px;
 }
+
+.reveal section .small-green {
+  width: 500px;
+}
+
+/*.reveal section .timeline-img {
+  width: 100%;
+}*/
