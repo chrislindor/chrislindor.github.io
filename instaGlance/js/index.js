@@ -103,7 +103,8 @@ function hashtagSearch(tag){
   // var accessToken = "371341073.b3244b0.cacfc856971e48239838a32de63f2226";
 
   // uses someone else's access token since instagram requires app approve to access public photos
-  var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
+  // var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
+  var anotherAccessToken = "e3f6f42f1a2b4ddeac3caa45b61e9340";
 
   console.log('url', url);
   $.ajax({
@@ -123,7 +124,8 @@ function hashtagSearch(tag){
 
 function userLookUp(userid){
   var url = 'https://api.instagram.com/v1/users/' + userid + '/media/recent';
-  var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
+  // var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
+  var anotherAccessToken = "e3f6f42f1a2b4ddeac3caa45b61e9340";
 
   console.log('url', url);
   $.ajax({
@@ -150,6 +152,7 @@ function userIdLookUp(username){
   // var anotherAccessToken = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587";
   // uses someone else's access token since instagram requires app approve to access public photos
   var anotherAccessToken = "30809397.e3f6f42.eb2a35cacea54357bec78bc2b93ea7ed";
+  var anotherAccessToken = "e3f6f42f1a2b4ddeac3caa45b61e9340";
 
   console.log('url', url);
   $.ajax({
