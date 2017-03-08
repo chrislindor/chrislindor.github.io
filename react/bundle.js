@@ -27071,11 +27071,6 @@
 	    demo: "http://chrislindor.com",
 	    img: imgPath + "cl/cl-site-pic.png"
 	  }
-	}, {
-	  title: "test5",
-	  url: "test5",
-	  thumbImg: "./assets/images/test-back.png",
-	  category: 'Design'
 	}];
 
 	exports.default = portData;
